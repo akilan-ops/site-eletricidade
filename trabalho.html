@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Eletricidade Instrumental</title>
+  <link rel="stylesheet" href="trabalho.css">
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <div class="login-container" id="login">
+    
+    <h2>Login do Usuário</h2>
+    <input type="text" id="usuario" placeholder="Usuário">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="logar()">Entrar</button>
+    <button onclick="pularLogin()" style="background-color: #2ECC40; margin-top: 10px;">Pular</button>
+    <p id="mensagem" style="color:red;"></p>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div id="conteudo" style="display:none;">
+
+    <header>
+      <h1>Portal de Eletricidade Instrumental</h1>
+      <p>Aprendizado com tecnologia e prática</p>
+      
+    </header>
+
+    <nav>
+      <button onclick="mostrar('inicio')">Início</button>
+      <button onclick="mostrar('teoria')">Teoria</button>
+      <button onclick="mostrar('instrumentos')">Instrumentos</button>
+      <button onclick="mostrar('exercicios')">Exercícios</button>
+      <button onclick="mostrar('curiosidades')">Curiosidades</button>
+    </nav>
+
+    <main>
+      <section id="inicio" class="section active">
+        <div class="perfil">
+          <img src="https://img.freepik.com/vetores-premium/icone-de-perfil-de-usuario-em-estilo-plano-ilustracao-em-vetor-avatar-membro-em-fundo-isolado-conceito-de-negocio-de-sinal-de-permissao-humana_157943-15752.jpg" alt="Usuária">
+          <div>
+            <h2>Bem-vinda, Aluna(o)!</h2>
+            <p>Pronta para aprender tudo sobre eletricidade instrumental?</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="teoria" class="section">
+        <h2>Teoria Básica</h2>
+        <ul>
+          <li><strong>Corrente elétrica:</strong> Movimento de elétrons por um condutor, como fios de cobre. Medida em ampères (A).</li>
+          <li><strong>Tensão (voltagem):</strong> Diferença de potencial entre dois pontos. Força que impulsiona os elétrons. Medida em volts (V).</li>
+          <li><strong>Resistência:</strong> Oposição à passagem da corrente elétrica. Medida em ohms (Ω).</li>
+          <li><strong>Prefixos Métricos:</strong> Representações de grandezas muito pequenas ou grandes (ex: mili, quilo).</li>
+          <li><strong>Lei de Ohm:</strong> Fórmula que relaciona tensão, resistência e corrente: <strong>V = R × I</strong>.</li>
+          <li><strong>Potência elétrica:</strong> Quantidade de energia consumida: <strong>P = V × I</strong>.</li>
+        </ul>
+      </section>
+
+      <section id="instrumentos" class="section instrumentos">
+        <h2>Instrumentos Elétricos</h2>
+        <div>
+          <img src="https://i.ytimg.com/vi/A-2NbL6dTXI/sddefault.jpg" alt="Tabela Prefixos Métricos">
+          <p><strong>Tabela de Prefixos:</strong> Usada para transformar unidades como mA, kV, µF, etc.</p>
+        </div>
+
+        <div>
+          <img src="https://m.media-amazon.com/images/I/81ma9HatWsL.jpg" alt="Multímetro Digital">
+          <p><strong>Multímetro:</strong> Mede tensão, corrente e resistência. Muito usado em eletrônica.</p>
+        </div>
+
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm69-a3UUhXymWFHM4dsHA9bvIEUNdHYqc8A&s" alt="Osciloscópio">
+          <p><strong>Osciloscópio:</strong> Mostra ondas de sinais elétricos. Permite analisar variações no tempo.</p>
+        </div>
+
+        <div>
+          <img src="https://cdn.awsli.com.br/600x700/2599/2599375/produto/2164708155b5d6f3dfe.jpg" alt="Fonte de Alimentação">
+          <p><strong>Fonte de alimentação:</strong> Fornece energia controlada para circuitos.</p>
+        </div>
+      </section>
+
+      <section id="exercicios" class="section exercicios">
+        <h2>Exercícios Interativos</h2>
+        <ol>
+          <li>
+            <p><strong>Qual a função de um multímetro?</strong></p>
+            <p class="dica">💡 Dica: Ele mede tensão, corrente e resistência.</p>
+            <input type="text" placeholder="Digite sua resposta...">
+          </li>
+          <li>
+            <p><strong>Explique o que é resistência elétrica.</strong></p>
+            <p class="dica">💡 Dica: É a dificuldade que os elétrons têm para se mover.</p>
+            <input type="text" placeholder="Digite sua resposta...">
+          </li>
+          <li>
+            <p><strong>Qual fórmula relaciona tensão, corrente e resistência?</strong></p>
+            <p class="dica">💡 Dica: V = R × I</p>
+            <input type="text" placeholder="Digite sua resposta...">
+          </li>
+        </ol>
+      </section>
+
+      <section id="curiosidades" class="section">
+        <h2>Curiosidades</h2>
+        <ul>
+          <li>A eletricidade instrumental testa placas de celulares e computadores.</li>
+          <li>Osciloscópios podem mostrar sons em forma de onda!</li>
+          <li>Sem multímetros, eletricistas trabalhariam no escuro (literalmente)!</li>
+        </ul>
+        <img src="https://media.brainly.com.br/image/rs:fill/w:1920/q:75/plain/https://pt-static.z-dn.net/files/d11/29d15ef96cca61dc6d3857267bac668c.png" alt="Circuito Didático" style="width:300px;">
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 | Criado por Ákila Narriane, Luiza Eduarda e Maria Clara Vasconcelos 💡
+    </footer>
+  </div>
+
+  <script>
+    function logar() {
+      let user = document.getElementById("usuario").value;
+      let pass = document.getElementById("senha").value;
+      let msg = document.getElementById("mensagem");
+
+      if (user === "aluna" && pass === "1234") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("conteudo").style.display = "block";
+      } else {
+        msg.textContent = "Usuário ou senha incorretos.";
+      }
+    }
+
+    function pularLogin() {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("conteudo").style.display = "block";
+    }
+
+    function mostrar(secao) {
+      const todas = document.querySelectorAll('.section');
+      todas.forEach(el => el.classList.remove('active'));
+      document.getElementById(secao).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
